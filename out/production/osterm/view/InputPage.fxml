@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="main-anchor" prefHeight="600.0" prefWidth="800.0" stylesheets="@styles/main-page.css"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InputController">
+   <children>
+      <Label fx:id="algorithmName" layoutX="50.0" layoutY="30.0" text="$algorithm">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="countLabel" layoutX="580.0" layoutY="46.0" style="-fx-text-fill: #FCE3FD" text="$process">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="processTable" layoutX="50.0" layoutY="79.0" prefHeight="340.0" prefWidth="702.0">
+        <columns>
+           <TableColumn fx:id="proID" prefWidth="175.0" text="프로세스ID" />
+           <TableColumn fx:id="arrTime" prefWidth="175.0" text="도착시간" />
+           <TableColumn fx:id="serTime" prefWidth="175.0" text="서비스시간" />
+           <TableColumn fx:id="pri" prefWidth="175.0" text="우선순위" />
+        </columns>
+      </TableView>
+      <TextField fx:id="processID" layoutX="58.0" layoutY="449.0" prefHeight="26.0" prefWidth="134.0" />
+      <TextField fx:id="arrivalTime" layoutX="204.0" layoutY="449.0" prefHeight="26.0" prefWidth="134.0" />
+      <TextField fx:id="burstTime" layoutX="351.0" layoutY="449.0" prefHeight="26.0" prefWidth="134.0" />
+      <TextField fx:id="priority" layoutX="494.0" layoutY="449.0" prefHeight="26.0" prefWidth="134.0" />
+      <Button fx:id="processAdd" layoutX="643.0" layoutY="450.0" mnemonicParsing="false" text="추가" onAction="#pressAdd"/>
+      <Button fx:id="processDel" layoutX="699.0" layoutY="449.0" mnemonicParsing="false" text="삭제" onAction="#pressDel"/>
+      <TextField fx:id="timeQuantum" layoutX="418.0" layoutY="507.0" prefHeight="26.0" prefWidth="134.0" />
+      <Button fx:id="next" layoutX="582.0" layoutY="495.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="166.0" text="스케줄링" onAction="#pressSchedule" />
+      <Button fx:id="prev" layoutX="50" layoutY="523.0" mnemonicParsing="false" prefHeight="33.4" prefWidth="87.0" text="이전" onAction="#pressPrev"/>
+   </children>
+</AnchorPane>

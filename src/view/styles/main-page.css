@@ -1,0 +1,19 @@
+#main-anchor{
+    -fx-background-color: "#FCE3FD";
+}
+
+#main-next{
+    -fx-border-color: "#95ADF5";
+    -fx-border-radius: 17px;
+    -fx-border-width: 3px;
+    -fx-background-color: "#FEFCBE";
+    -fx-background-radius: 17px;
+}
+
+#main-next:pressed{
+    -fx-background-color: "#95ADF5";
+}
+
+#algorithmBox{
+    -fx-background-color: "#C0E6FC";
+}
